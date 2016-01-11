@@ -1,15 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9531"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Radar" customModule="NiceRadar" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWz-XE-cNL" customClass="IndicatorView" customModule="NiceRadar" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="TWz-XE-cNL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Lbw-LG-pFC"/>
+                <constraint firstItem="TWz-XE-cNL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Nvc-CL-pA9"/>
+                <constraint firstItem="TWz-XE-cNL" firstAttribute="width" secondItem="TWz-XE-cNL" secondAttribute="height" multiplier="1:1" id="Pxx-Ja-8oR"/>
+                <constraint firstAttribute="trailing" secondItem="TWz-XE-cNL" secondAttribute="trailing" id="cf1-Ao-UWi"/>
+                <constraint firstAttribute="bottom" secondItem="TWz-XE-cNL" secondAttribute="bottom" id="x2l-PG-lf9"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Pxx-Ja-8oR"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="indicator" destination="TWz-XE-cNL" id="xon-hW-qUD"/>
+            </connections>
         </view>
     </objects>
 </document>

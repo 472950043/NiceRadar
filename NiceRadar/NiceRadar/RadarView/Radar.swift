@@ -9,13 +9,25 @@
 import UIKit
 
 class Radar: UIView {
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    
+    @IBOutlet var indicator: IndicatorView!
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
-    */
-
+    
+    class func instanceRadar() -> Radar{
+        // type method implementation goes here
+        return NSBundle.mainBundle().loadNibNamed("Radar", owner: nil, options: nil).first as! Radar
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        初始化()
+    }
+    
+    func 初始化(){
+        indicator.backgroundColor = UIColor.clearColor()
+    }
+    
 }

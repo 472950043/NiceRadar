@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NiceRadar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +17,120 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5s-7a-0g6">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cE-6B-yVG">
+                                        <rect key="frame" x="20" y="20" width="173" height="173"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAF-4o-rrM" customClass="IndicatorView" customModule="NiceRadar" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="173" height="173"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.48627450979999998" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="FAF-4o-rrM" firstAttribute="top" secondItem="6cE-6B-yVG" secondAttribute="top" id="8JZ-nH-ERp"/>
+                                            <constraint firstItem="FAF-4o-rrM" firstAttribute="leading" secondItem="6cE-6B-yVG" secondAttribute="leading" id="Gpa-Nl-BKm"/>
+                                            <constraint firstAttribute="width" secondItem="6cE-6B-yVG" secondAttribute="height" multiplier="1:1" id="Vej-Go-Mo8"/>
+                                            <constraint firstAttribute="trailing" secondItem="FAF-4o-rrM" secondAttribute="trailing" id="jHa-MK-Bgq"/>
+                                            <constraint firstAttribute="bottom" secondItem="FAF-4o-rrM" secondAttribute="bottom" id="s77-Yc-OLY"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Idq-wH-mkx">
+                                        <rect key="frame" x="213" y="20" width="174" height="173"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7t-IQ-agf" customClass="RadarView" customModule="NiceRadar" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="174" height="173"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kGZ-2X-ATo" customClass="IndicatorView" customModule="NiceRadar" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="174" height="173"/>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="kGZ-2X-ATo" firstAttribute="leading" secondItem="g7t-IQ-agf" secondAttribute="leading" id="ghA-YM-gPh"/>
+                                                    <constraint firstAttribute="bottom" secondItem="kGZ-2X-ATo" secondAttribute="bottom" id="hL0-v3-aCr"/>
+                                                    <constraint firstItem="kGZ-2X-ATo" firstAttribute="top" secondItem="g7t-IQ-agf" secondAttribute="top" id="k9N-7Y-EtQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="kGZ-2X-ATo" secondAttribute="trailing" id="umD-B1-9nk"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.82352941180000006" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="g7t-IQ-agf" firstAttribute="top" secondItem="Idq-wH-mkx" secondAttribute="top" id="1Iv-Ld-j6c"/>
+                                            <constraint firstAttribute="width" secondItem="Idq-wH-mkx" secondAttribute="height" multiplier="1:1" id="9VX-s1-2f5"/>
+                                            <constraint firstItem="g7t-IQ-agf" firstAttribute="leading" secondItem="Idq-wH-mkx" secondAttribute="leading" id="eUv-xR-pw6"/>
+                                            <constraint firstAttribute="bottom" secondItem="g7t-IQ-agf" secondAttribute="bottom" id="hjY-mE-p2T"/>
+                                            <constraint firstAttribute="trailing" secondItem="g7t-IQ-agf" secondAttribute="trailing" id="q14-yf-6hZ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbW-yp-iYg">
+                                        <rect key="frame" x="407" y="20" width="173" height="173"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VgC-BJ-Lji" customClass="CircleView" customModule="NiceRadar" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="173" height="173"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQ3-u0-fDo" customClass="IndicatorView" customModule="NiceRadar" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="173" height="173"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="VgC-BJ-Lji" firstAttribute="leading" secondItem="dbW-yp-iYg" secondAttribute="leading" id="ILB-4D-iWj"/>
+                                            <constraint firstAttribute="trailing" secondItem="kQ3-u0-fDo" secondAttribute="trailing" id="LXT-6r-xia"/>
+                                            <constraint firstItem="VgC-BJ-Lji" firstAttribute="top" secondItem="dbW-yp-iYg" secondAttribute="top" id="Qh2-f1-9NR"/>
+                                            <constraint firstAttribute="bottom" secondItem="kQ3-u0-fDo" secondAttribute="bottom" id="QvE-eV-IP0"/>
+                                            <constraint firstAttribute="trailing" secondItem="VgC-BJ-Lji" secondAttribute="trailing" id="UNP-ot-zc1"/>
+                                            <constraint firstAttribute="width" secondItem="dbW-yp-iYg" secondAttribute="height" multiplier="1:1" id="i9Q-iZ-fzH"/>
+                                            <constraint firstAttribute="bottom" secondItem="VgC-BJ-Lji" secondAttribute="bottom" id="l9V-Ll-nhL"/>
+                                            <constraint firstItem="kQ3-u0-fDo" firstAttribute="leading" secondItem="dbW-yp-iYg" secondAttribute="leading" id="qo5-OV-iBF"/>
+                                            <constraint firstItem="kQ3-u0-fDo" firstAttribute="top" secondItem="dbW-yp-iYg" secondAttribute="top" id="ruW-Sn-z8u"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMJ-4T-pc5">
+                                        <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="6Dy-Vu-5sn"/>
+                                            <constraint firstAttribute="width" constant="100" id="87i-sz-ERR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="6cE-6B-yVG" firstAttribute="leading" secondItem="p5s-7a-0g6" secondAttribute="leading" constant="20" id="2FT-1A-TL4"/>
+                                    <constraint firstItem="dbW-yp-iYg" firstAttribute="width" secondItem="6cE-6B-yVG" secondAttribute="width" id="G1X-k6-uIr"/>
+                                    <constraint firstItem="lMJ-4T-pc5" firstAttribute="centerY" secondItem="p5s-7a-0g6" secondAttribute="centerY" id="Kfd-0w-ncu"/>
+                                    <constraint firstItem="Idq-wH-mkx" firstAttribute="top" secondItem="p5s-7a-0g6" secondAttribute="top" constant="20" id="RbT-wL-Hdh"/>
+                                    <constraint firstItem="dbW-yp-iYg" firstAttribute="top" secondItem="p5s-7a-0g6" secondAttribute="top" constant="20" id="Rzj-1k-0fj"/>
+                                    <constraint firstItem="Idq-wH-mkx" firstAttribute="leading" secondItem="6cE-6B-yVG" secondAttribute="trailing" constant="20" id="SZj-n0-GXM"/>
+                                    <constraint firstItem="dbW-yp-iYg" firstAttribute="leading" secondItem="Idq-wH-mkx" secondAttribute="trailing" constant="20" id="bhm-Zy-xE7"/>
+                                    <constraint firstItem="lMJ-4T-pc5" firstAttribute="centerX" secondItem="p5s-7a-0g6" secondAttribute="centerX" id="eem-FH-Ce0"/>
+                                    <constraint firstItem="6cE-6B-yVG" firstAttribute="top" secondItem="p5s-7a-0g6" secondAttribute="top" constant="20" id="hAk-zR-M6p"/>
+                                    <constraint firstItem="Idq-wH-mkx" firstAttribute="width" secondItem="6cE-6B-yVG" secondAttribute="width" id="iM4-G2-SqT"/>
+                                    <constraint firstAttribute="trailing" secondItem="dbW-yp-iYg" secondAttribute="trailing" constant="20" id="ofs-hf-hB7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="p5s-7a-0g6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qfh-SP-1ed"/>
+                            <constraint firstAttribute="bottom" secondItem="p5s-7a-0g6" secondAttribute="bottom" id="Zve-MQ-vmL"/>
+                            <constraint firstAttribute="trailing" secondItem="p5s-7a-0g6" secondAttribute="trailing" id="j8d-hH-fNU"/>
+                            <constraint firstItem="p5s-7a-0g6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mnH-nB-G0L"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="circleView" destination="VgC-BJ-Lji" id="zku-UG-9Fx"/>
+                        <outlet property="indicator1" destination="FAF-4o-rrM" id="d0A-0z-xPO"/>
+                        <outlet property="indicator2" destination="kGZ-2X-ATo" id="qvY-OT-vu6"/>
+                        <outlet property="indicator3" destination="kQ3-u0-fDo" id="3O0-c7-WVC"/>
+                        <outlet property="radar" destination="lMJ-4T-pc5" id="3Di-ZU-m7Z"/>
+                        <outlet property="radarView" destination="g7t-IQ-agf" id="yT8-8I-J1v"/>
+                        <outlet property="view1" destination="6cE-6B-yVG" id="rhM-0W-uib"/>
+                        <outlet property="view2" destination="Idq-wH-mkx" id="4Pf-fV-OE7"/>
+                        <outlet property="view3" destination="dbW-yp-iYg" id="M2v-aH-go2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
